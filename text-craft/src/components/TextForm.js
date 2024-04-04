@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 
 export default function TextForm() {
-    const [text, setText] = useState();
+    const [text, setText] = useState('');
 
-    const onChange = () =>{
-
+    const handleOnChange = (event) =>{
+        setText(event.target.value);
     }
-    const toUpperCase = () =>{
 
+    const toUpperCase = () =>{
+        setText(text.toUpperCase());
     }
 
     const toLowerCase = () =>{
-
+        setText(text.toLowerCase());
     }
 
 
@@ -19,8 +20,9 @@ export default function TextForm() {
     <>
       <div class="form-group">
         <h2 for="comment">Enter Your Text Below:</h2>
-        <textarea class="form-control" rows="8" id="textArea" placeholder="Enter You Text Here"></textarea>
-        <button className="btn btn-primary my-3" >Convert to UpperCase</button>
+        <textarea class="form-control" value={text} onChange={handleOnChange} rows="8" id="textArea" placeholder="Enter You Text Here"></textarea>
+        <button className="btn btn-primary my-3" onClick={toUpperCase}>Convert to UpperCase</button>
+        <button className="btn btn-primary my-3 mx-2" onClick={toLowerCase}>Convert to UpperCase</button>
       </div>
     </>
   );
