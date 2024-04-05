@@ -15,6 +15,8 @@ export default function TextForm() {
     setText(text.toLowerCase());
   };
 
+  const copyText = () => {};
+  navigator.clipboard.writeText(text)
   return (
     <>
       <div class="form-group">
@@ -32,6 +34,9 @@ export default function TextForm() {
         </button>
         <button className="btn btn-primary my-3 mx-2" onClick={toLowerCase}>
           Convert to toLowerCase
+        </button>
+        <button className="btn btn-primary my-3 mx-2" onClick={copyText}>
+          Copy Text
         </button>
       </div>
       <div className="container my-3 ">
