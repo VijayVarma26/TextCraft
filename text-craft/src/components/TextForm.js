@@ -31,7 +31,7 @@ export default function TextForm() {
           Convert to UpperCase
         </button>
         <button className="btn btn-primary my-3 mx-2" onClick={toLowerCase}>
-          Convert to UpperCase
+          Convert to toLowerCase
         </button>
       </div>
       <div className="container my-3 ">
