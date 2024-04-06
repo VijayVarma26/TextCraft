@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <Navbar webTitle = 'TextCraft' />
-      <div className="container my-3">
-        <TextForm />
-      </div>
+      <TextForm />
     </>
   );
 }
